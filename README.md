@@ -2,6 +2,8 @@
 
 Base Student is a Spring Boot application scaffold for managing student records. The project currently contains the application entry point and a JPA entity; API, persistence, and service layers are not implemented yet.
 
+#What up, agregue un comentario dude
+
 ## Technology Stack
 
 - Java 21
@@ -79,13 +81,13 @@ To activate the development profile:
 
 `StudentModel` is mapped to the `student` table:
 
-| Property | Database column | Type | Notes |
-| --- | --- | --- | --- |
-| `id` | `id` | `Integer` | Auto-generated identity primary key |
-| `name` | `name` | `String` | Maximum length 80 |
-| `lastName` | `last_name` | `String` | Maximum length 50 |
-| `phone` | `phone` | `String` | Maximum length 20 |
-| `eMail` | `email` | `String` | Maximum length 80 |
+| Property   | Database column | Type      | Notes                               |
+| ---------- | --------------- | --------- | ----------------------------------- |
+| `id`       | `id`            | `Integer` | Auto-generated identity primary key |
+| `name`     | `name`          | `String`  | Maximum length 80                   |
+| `lastName` | `last_name`     | `String`  | Maximum length 50                   |
+| `phone`    | `phone`         | `String`  | Maximum length 20                   |
+| `eMail`    | `email`         | `String`  | Maximum length 80                   |
 
 Lombok provides getters, setters, constructors, `equals`, `hashCode`, `toString`, and a builder for the entity.
 
