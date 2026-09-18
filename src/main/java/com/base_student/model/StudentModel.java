@@ -12,7 +12,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tools.jackson.databind.ObjectMapper;
 
 @Data
 @Builder
@@ -42,11 +41,6 @@ public class StudentModel {
                 .phone(this.phone)
                 .eMail(this.eMail)
                 .build();
-    }
-
-    @Override
-    public String toString() {
-        return new ObjectMapper().writeValueAsString(this);
     }
 
 }

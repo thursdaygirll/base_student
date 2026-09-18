@@ -21,4 +21,10 @@ public class StudentService {
         return studentRepository.findAll().stream().map(StudentModel::toDto).toList();
     }
 
+    public StudentDto findById(Integer id) {
+        return studentRepository.findById(id)
+                .map(StudentModel::toDto)
+                .orElseThrow(() -> new RuntimeException("Student not found with id: " + id));
+    }
+
 }
