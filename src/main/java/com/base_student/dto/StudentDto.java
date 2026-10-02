@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tools.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Representa el objeto de transferencia de datos (DTO) de un estudiante.
@@ -71,7 +71,11 @@ public class StudentDto {
      */
     @Override
     public String toString() {
-        return new ObjectMapper().writeValueAsString(this);
+        try {
+            return new ObjectMapper().writeValueAsString(this);
+        } catch (Exception e) {
+            return super.toString();
+        }
     }
 
 }
